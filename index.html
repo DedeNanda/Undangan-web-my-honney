@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Album Melanni and Dede</title>
+    <link rel="icon" href="img/icon.png" type="image/x-icon" />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <!-- untuk dalam body hanya pada undangan saja pada bagian mobile navigasi agar kelihatan, jadi untuk kedepannya jangan dipakai untuk mobile hanya untuk belajar saja -->
+  <body class="overflow-hidden">
+    <!-- open web atau undangan -->
+    <div
+      class="bg-[url('img/enkanomiya.jpeg')] bg-cover bg-center h-screen"
+      id="halamanAwal"
+    >
+      <div
+        class="bg-black/30 w-full h-screen flex flex-col justify-center items-center space-y-8"
+      >
+        <div class="w-72 md:w-1/2 h-32 flex justify-around space-x-3">
+          <img
+            src="img/gs1.png"
+            alt=""
+            class="bg-slate-500/50 w-32 border-4 rounded-full"
+          />
+          <img
+            src="img/gs2.png"
+            alt=""
+            class="bg-slate-500/50 w-32 border-4 rounded-full"
+          />
+          <img
+            src="img/gs7.png"
+            alt=""
+            class="bg-slate-500/50 w-32 border-4 rounded-full hidden md:block"
+          />
+        </div>
+        <div
+          class="w-80 md:w-1/2 h-32 flex flex-col justify-center items-center space-y-6"
+        >
+          <p
+            class="text-3xl md:text-5xl font-bold font font-dancing-script text-sky-600/90 text-shadow-white"
+          >
+            Selamat datang My Honey
+          </p>
+          <div class="animate-bounce">
+            <button
+              class="flex items-center gap-2 px-5 py-2 text-white bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700 active:scale-95 transition-all"
+              onclick="bukaUndangan()"
+            >
+              <box-icon name="envelope" color="#f3e8e8"></box-icon>
+              Click the Button
+            </button>
+          </div>
+        </div>
+        <div class="w-72 md:w-1/2 h-32 flex justify-around space-x-3">
+          <img
+            src="img/gs6.png"
+            alt=""
+            class="bg-slate-500/50 w-32 border-4 rounded-full"
+          />
+          <img
+            src="img/gs9.png"
+            alt=""
+            class="bg-slate-500/50 w-32 border-4 rounded-full"
+          />
+          <img
+            src="img/gs8.png"
+            alt=""
+            class="bg-slate-500/50 w-32 border-4 rounded-full hidden md:block"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- untuk play music  -->
+    <div
+      class="aspect-square fixed bottom-0 right-0 mb-32 mr-2 z-40 flex flex-col"
+    >
+      <!-- music -->
+      <audio
+        id="audio"
+        src="video/JiwaYangBersedih-GheaIndrawariPiano.mp3"
+      ></audio>
+
+      <!-- button play/pause -->
+      <button id="playPauseBtn">
+        <box-icon
+          id="icon"
+          name="play-circle"
+          color="#10fbd7"
+          class="bg-slate-600/80 size-16 hover:shadow-[0_0_10px_5px_rgba(61,233,215,0.982)] rounded-full"
+        ></box-icon>
+      </button>
+    </div>
+
+    <!-- navbar -->
+    <nav class="bg-white/60 sticky top-0 hidden md:block z-50">
+      <div class="container mx-auto p-2 flex">
+        <div
+          class="w-1/2 space-x-5 text-center text-lg font-semibold fade-top animated"
+          style="--i: 1"
+        >
+          <a
+            href="#weStory"
+            class="hover:font-bold hover:drop-shadow-[2px_2px_0_rgb(255,0,217)]"
+            >We Story</a
+          >
+          <a
+            href="#memories"
+            class="hover:font-bold hover:drop-shadow-[2px_2px_0_rgb(255,0,217)]"
+            >Memories</a
+          >
+        </div>
+        <div class="w-1/2 text-center fade-top animated" style="--i: 2">
+          <a href="#home" class="text-3xl font-playwrite font-bold"
+            >Melanni and Dede</a
+          >
+        </div>
+        <div
+          class="w-1/2 space-x-5 text-center text-lg font-semibold fade-top animated"
+          style="--i: 3"
+        >
+          <a
+            href="#adventureTogether"
+            class="hover:font-bold hover:drop-shadow-[2px_2px_0_rgb(16,129,227)]"
+            >Adventure Together</a
+          >
+          <a
+            href="#myHoney"
+            class="hover:font-bold hover:drop-shadow-[2px_2px_0_rgb(16,129,227)]"
+            >My Honey</a
+          >
+        </div>
+      </div>
+    </nav>
+    <!-- end of navbar -->
+
+    <!-- home section -->
+    <section
+      id="home"
+      class="bg-[url('/img/gambar1.jpg')] h-screen bg-cover bg-bottom"
+    >
+      <div
+        class="bg-black/60 h-full flex justify-center items-center md:grid-cols-3 space-x-6"
+      >
+        <div
+          class="bg-white/70 w-1/6 h-1/2 p-3 rounded-lg hidden md:block duration-300 hover:scale-95"
+        >
+          <div class="rounded-lg flex flex-wrap justify-center">
+            <img
+              src="img/IMG-20240523-WA0012.jpg"
+              alt="foto"
+              class="w-full h-72 bg-contain rounded-lg border-4 border-pink-600/80"
+            />
+            <p class="mt-2 font-playwrite text-sm font-semibold">
+              Melanni Effendi
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="w-80 md:w-1/2 space-y-5 fade-zoomIn animated"
+          style="--i: 4"
+        >
+          <p
+            class="text-2xl md:text-5xl text-center bg-gradient-to-r from-pink-600/80 to-blue-600/80 text-transparent bg-clip-text font-bold"
+          >
+            Our Memory of The Journey
+          </p>
+          <div class="text-center border-t-4 border-b-4 p-3 border-sky-600/80">
+            <span
+              class="text-xl md:text-3xl text-white font-bold font-playwrite text-shadow"
+              id="text_typed1"
+            ></span>
+            <p class="text-white text-lg text-shadow">&</p>
+            <span
+              class="text-xl md:text-3xl text-white font-bold font-playwrite text-shadow"
+              id="text_typed2"
+            ></span>
+          </div>
+          <p class="text-white text-center">
+            Tidak ada yang lebih indah daripada menciptakan kenangan bersama
+            dalam setiap langkah perjalanan ini. Meskipun perjalanan kita masih
+            panjang, saya berharap kita bisa selalu berjalan beriringan, saling
+            menguatkan, dan tetap bersama hingga mencapai tujuan yang kita
+            impikan. Setiap momen bersamamu adalah bagian dari cerita yang ingin
+            saya abadikan selamanya.
+          </p>
+        </div>
+
+        <div
+          class="bg-white/70 w-1/6 h-1/2 p-3 rounded-lg hidden md:block duration-300 hover:scale-95"
+        >
+          <div class="rounded-lg flex flex-wrap justify-center">
+            <img
+              src="img/thug_life1.jpg"
+              alt="foto"
+              class="w-full h-72 bg-contain rounded-lg border-4 border-sky-600/80"
+            />
+            <p class="mt-2 font-playwrite text-sm font-semibold">
+              M. Dede Nanda Pratama
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of home section -->
+
+    <!-- we story -->
+    <section id="weStory" class="bg-slate-500/40 w-full h-screen-auto p-5">
+      <h1
+        class="text-center font-playwrite text-5xl mt-8 fade-top animated"
+        style="--i: 5"
+      >
+        We Story
+      </h1>
+      <div class="flex flex-col md:flex md:flex-row md:items-center space-y-4">
+        <!-- Foto 1 -->
+        <div
+          class="mt-5 p-1 flex items-center space-x-3 fade-zoomIn animated"
+          style="--i: 6"
+        >
+          <img
+            src="img/IMG-20240804-WA0008.jpg"
+            class="rounded-full w-24 h-36 border-4 border-blue-500 transition duration-300 ease-in-out transform hover:scale-95"
+          />
+          <p>Pertemuan pertama di Stasiun Lambung, Bukittinggi</p>
+        </div>
+
+        <!-- Garis Penghubung -->
+        <div
+          class="h-16 border-dashed border-l-4 border-white ml-12 md:ml-2 md:hidden fade-zoomIn animated"
+          style="--i: 7"
+        ></div>
+
+        <!-- Foto 2 -->
+        <div
+          class="mt-5 p-1 flex items-center space-x-3 fade-zoomIn animated"
+          style="--i: 8"
+        >
+          <img
+            src="img/IMG-20240901-WA0003.jpg"
+            class="rounded-full w-24 h-36 border-4 border-blue-500 transition duration-300 ease-in-out transform hover:scale-95"
+          />
+          <p>Pertemuan kedua di Gunung Padang, Padang</p>
+        </div>
+
+        <!-- Garis Penghubung -->
+        <div
+          class="h-16 border-dashed border-l-4 border-white ml-12 md:ml-2 md:hidden fade-zoomIn animated"
+          style="--i: 9"
+        ></div>
+
+        <!-- Foto 3 -->
+        <div
+          class="mt-5 p-1 flex items-center space-x-3 fade-zoomIn animated"
+          style="--i: 10"
+        >
+          <img
+            src="img/IMG-20241012-WA0049.jpg"
+            class="rounded-full w-24 h-36 border-4 border-blue-500 transition duration-300 ease-in-out transform hover:scale-95"
+          />
+          <p>Pertemuan ketiga Perjalanan ke Pariaman, Pariaman</p>
+        </div>
+
+        <!-- Garis Penghubung -->
+        <div
+          class="h-16 border-dashed border-l-4 border-white ml-12 md:ml-2 md:hidden fade-zoomIn animated"
+          style="--i: 11"
+        ></div>
+
+        <!-- Foto 4 -->
+        <div
+          class="mt-5 p-1 flex items-center space-x-3 fade-zoomIn animated"
+          style="--i: 12"
+        >
+          <img
+            src="img/IMG20241102144751.jpg"
+            class="rounded-full h-36 w-24 border-4 border-blue-500 transition duration-300 ease-in-out transform hover:scale-95"
+          />
+          <p>Pertemuan keempat Puncak Taruko, Ngarai Bukittinggi</p>
+        </div>
+      </div>
+    </section>
+    <!-- end of we story -->
+
+    <!-- Memories -->
+    <section
+      id="memories"
+      class="bg-gradient-to-b from-black to-blue-600/50 w-full h-screen-auto p-5"
+    >
+      <h1
+        class="text-center text-white font-playwrite text-5xl mt-6 text-shadow-blue fade-top animated"
+        style="--i: 13"
+      >
+        Memories
+      </h1>
+
+      <div
+        class="w-full h-full flex flex-col sm:grid sm:grid-cols-2 md:grid-cols-3 gap-2 mt-5"
+      >
+        <div class="fade-left animated" style="--i: 14">
+          <img
+            src="img/IMG-20240901-WA0009.jpg"
+            class="w-full h-64 border-4 border-white rounded-lg transition duration-300 ease-in-out transform hover:scale-95 hover:shadow-[0_0_20px_5px_rgba(59,130,246,0.8)]"
+          />
+        </div>
+
+        <div class="fade-zoomIn animated" style="--i: 15">
+          <img
+            src="img/IMG-20240901-WA0135.jpg"
+            class="w-full h-64 border-4 border-white rounded-lg transition duration-300 ease-in-out transform hover:scale-95 hover:shadow-[0_0_20px_5px_rgba(59,130,246,0.8)]"
+          />
+        </div>
+
+        <div class="fade-right animated" style="--i: 16">
+          <img
+            src="img/IMG-20240901-WA0129.jpg"
+            class="w-full h-64 border-4 border-white rounded-lg transition duration-300 ease-in-out transform hover:scale-95 hover:shadow-[0_0_20px_5px_rgba(59,130,246,0.8)]"
+          />
+        </div>
+
+        <div class="fade-left animated" style="--i: 17">
+          <img
+            src="img/IMG-20241012-WA0045.jpg"
+            class="w-full h-full border-4 border-white rounded-lg transition duration-300 ease-in-out transform hover:scale-95 hover:shadow-[0_0_20px_5px_rgba(59,130,246,0.8)]"
+          />
+        </div>
+
+        <div class="fade-zoomIn animated" style="--i: 18">
+          <img
+            src="img/IMG20241102144718.jpg"
+            class="w-full h-full border-4 border-white rounded-lg transition duration-300 ease-in-out transform hover:scale-95 hover:shadow-[0_0_20px_5px_rgba(59,130,246,0.8)]"
+          />
+        </div>
+
+        <div class="fade-right animated" style="--i: 19">
+          <img
+            src="img/IMG-20240804-WA0007.jpg"
+            class="w-full h-full border-4 border-white rounded-lg transition duration-300 ease-in-out transform hover:scale-95 hover:shadow-[0_0_20px_5px_rgba(59,130,246,0.8)]"
+          />
+        </div>
+
+        <div class="fade-left animated" style="--i: 20">
+          <img
+            src="img/IMG-20241013-WA0033.jpg"
+            class="w-full h-64 border-4 border-black/70 rounded-lg transition duration-300 ease-in-out transform hover:scale-95 hover:shadow-[0_0_10px_5px_rgba(255,20,147,0.8)]"
+          />
+        </div>
+
+        <div class="fade-zoomIn animated" style="--i: 21">
+          <img
+            src="img/IMG-20240901-WA0164.jpg"
+            class="w-full h-64 border-4 border-black/70 rounded-lg transition duration-300 ease-in-out transform hover:scale-95 hover:shadow-[0_0_10px_5px_rgba(255,20,147,0.8)]"
+          />
+        </div>
+
+        <div class="fade-right animated" style="--i: 22">
+          <img
+            src="img/IMG-20240901-WA0166.jpg"
+            class="w-full h-64 border-4 border-black/70 rounded-lg transition duration-300 ease-in-out transform hover:scale-95 hover:shadow-[0_0_10px_5px_rgba(255,20,147,0.8)]"
+          />
+        </div>
+
+        <div class="fade-left animated" style="--i: 23">
+          <img
+            src="img/IMG20241102144651.jpg"
+            class="w-full h-full border-4 border-black/70 rounded-lg transition duration-300 ease-in-out transform hover:scale-95 hover:shadow-[0_0_10px_5px_rgba(255,20,147,0.8)]"
+          />
+        </div>
+
+        <div class="fade-zoomIn animated" style="--i: 24">
+          <img
+            src="img/IMG20241012160511.jpg"
+            class="w-full h-full border-4 border-black/70 rounded-lg transition duration-300 ease-in-out transform hover:scale-95 hover:shadow-[0_0_10px_5px_rgba(255,20,147,0.8)]"
+          />
+        </div>
+
+        <div class="fade-right animated" style="--i: 25">
+          <img
+            src="img/IMG-20240901-WA0123.jpg"
+            class="w-full h-full border-4 border-black/70 rounded-lg transition duration-300 ease-in-out transform hover:scale-95 hover:shadow-[0_0_10px_5px_rgba(255,20,147,0.8)]"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- end of Memories -->
+
+    <!--  Adventure Together -->
+    <section
+      id="adventureTogether"
+      class="bg-gradient-to-b from-blue-600/50 to-black w-full h-screen p-5"
+    >
+      <h1
+        class="text-center font-playwrite text-5xl mt-6 text-shadow-pink fade-top animated"
+        style="--i: 26"
+      >
+        Adventure Together
+      </h1>
+
+      <div
+        class="w-full h-60 md:h-3/5 mt-10 fade-zoomIn animated"
+        style="--i: 27"
+      >
+        <video
+          src="video/recap.mp4"
+          class="w-full h-full"
+          autoplay
+          loop
+          muted
+        ></video>
+      </div>
+
+      <div class="w-full h-52 md:h-32 mt-12 md:mt-5 overflow-hidden">
+        <div
+          class="aspect-square h-44 md:h-32 flex flex-row space-x-10 animate-slide-left-loop"
+        >
+          <img
+            src="img/gs1.png"
+            alt="gs1"
+            class="grayscale hover:grayscale-0"
+          />
+          <img
+            src="img/gs2.png"
+            alt="gs2"
+            class="grayscale hover:grayscale-0"
+          />
+          <img
+            src="img/gs3.png"
+            alt="gs3"
+            class="grayscale hover:grayscale-0"
+          />
+          <img
+            src="img/gs4.png"
+            alt="gs4"
+            class="grayscale hover:grayscale-0"
+          />
+          <img
+            src="img/gs5.png"
+            alt="gs5"
+            class="grayscale hover:grayscale-0"
+          />
+          <img
+            src="img/gs6.png"
+            alt="gs6"
+            class="grayscale hover:grayscale-0"
+          />
+          <img
+            src="img/gs7.png"
+            alt="gs7"
+            class="grayscale hover:grayscale-0"
+          />
+          <img
+            src="img/gs8.png"
+            alt="gs8"
+            class="grayscale hover:grayscale-0"
+          />
+          <img
+            src="img/gs9.png"
+            alt="gs9"
+            class="grayscale hover:grayscale-0"
+          />
+          <img
+            src="img/gs10.png"
+            alt="gs10"
+            class="grayscale hover:grayscale-0"
+          />
+        </div>
+      </div>
+    </section>
+    <!--  end of Adventure Together -->
+
+    <!-- My Honey -->
+    <section
+      id="myHoney"
+      class="bg-black w-full h-screen-auto flex flex-col items-center p-3 space-y-12"
+    >
+      <h1
+        class="text-white/50 text-shadow-blue font-playwrite text-5xl mt-6 fade-top animated"
+        style="--i: 28"
+      >
+        My Honey
+      </h1>
+
+      <div class="fade-zoomIn animated" style="--i: 29">
+        <div
+          class="bg-white/70 w-48 h-1/2 flex flex-col items-center p-3 space-y-1 rounded-lg transition duration-300 ease-in-out transform hover:scale-95 shadow-[0_0_10px_5px_rgba(255,255,255,0.982)] hover:shadow-[0_0_20px_5px_rgba(245,7,186,0.953)]"
+        >
+          <img
+            src="img/IMG-20250113-WA0002.jpg"
+            alt=""
+            class="w-40 border-4 border-black rounded-t-lg"
+          />
+          <p
+            class="text-lg font-playwrite font-bold border-b-2 border-slate-700"
+          >
+            Melanni Effendi
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="w-full md:w-1/2 h-full p-2 fade-zoomIn animated"
+        style="--i: 30"
+      >
+        <h1
+          class="font-ptsansnarrow text-2xl font-bold text-yellow-500/80 text-shadow-white"
+        >
+          Haii, MELANNI EFFENDI
+        </h1>
+        <p
+          class="font-dancing-script font-semibold mt-1 text-amber-900 text-2xl text-shadow-white text-justify"
+        >
+          Having you in my life is the greatest gift I could ever ask for. Every
+          smile, every moment, and every memory we create together fills my
+          heart with gratitude. I thank the universe every day for bringing you
+          into my life, and I promise to cherish you always.
+        </p>
+        <br />
+        <p
+          class="font-amatic-sc text-white font-semibold text-justify text-shadow-blue text-2xl"
+        >
+          Semoga setiap impian yang kita genggam bersama dapat terwujud dengan
+          indah. Mas berharap kebahagiaan selalu menyertai langkah kita, dan
+          cinta ini terus tumbuh tanpa batas. Mari kita jalani hari-hari dengan
+          penuh harapan, keyakinan, dan cinta yang tak pernah pudar.
+        </p>
+      </div>
+    </section>
+    <!-- end of My Honey -->
+
+    <!-- footer -->
+    <footer class="bg-black h-16 flex justify-center items-center">
+      <p class="text-white">Copyright MDNP © 2025</p>
+    </footer>
+    <!-- end of footer -->
+
+    <!-- navbar version mobile -->
+    <div
+      class="bg-white/50 w-full h-14 p-3 flex justify-evenly space-x-6 sticky bottom-0 md:hidden z-40"
+    >
+      <a href="#weStory">
+        <box-icon name="book" class="size-8"></box-icon>
+      </a>
+      <a href="#memories">
+        <box-icon name="photo-album" class="size-8"></box-icon>
+      </a>
+      <a href="#home"><box-icon name="home-alt" class="size-8"></box-icon> </a>
+      <a href="#adventureTogether">
+        <box-icon name="landscape" class="size-8"></box-icon>
+      </a>
+      <a href="#myHoney">
+        <box-icon name="heart" class="size-8"></box-icon>
+      </a>
+    </div>
+    <!-- end of navbar version mobile -->
+
+    <!-- script typed by jsdeliver -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- boxicon -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

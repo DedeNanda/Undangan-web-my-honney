@@ -1,0 +1,130 @@
+/* untuk font */
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
+
+.font-playwrite {
+  font-family: "Playwrite HU";
+}
+
+.font-ptsansnarrow {
+  font-family: "PT Sans Narrow";
+}
+
+.font-dancing-script {
+  font-family: "Dancing Script";
+}
+
+.font-amatic-sc {
+  font-family: "Amatic SC";
+}
+
+/* untuk text shadow */
+.text-shadow {
+  text-shadow: 2px 2px 5px violet;
+}
+
+.text-shadow-pink {
+  text-shadow: 4px 4px 5px pink;
+}
+
+.text-shadow-blue {
+  text-shadow: 2px 2px 5px rgb(18, 69, 234);
+}
+
+.text-shadow-white {
+  text-shadow: 1px 1px 2px white;
+}
+
+/* animasi slide unlimited ke kiri pada bagian adventure together */
+
+@keyframes slideLeftLoop {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-600%);
+  }
+}
+
+.animate-slide-left-loop {
+  animation: slideLeftLoop 20s linear infinite;
+}
+
+/* kumpulan animasi secara bergantian */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animated {
+  opacity: 0;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: calc(var(--i) * 0.3s);
+}
+
+.fade-left {
+  animation-name: fadeInLeft;
+}
+
+.fade-right {
+  animation-name: fadeInRight;
+}
+
+.fade-top {
+  animation-name: fadeInTop;
+}
+
+.fade-zoomIn {
+  animation-name: zoomIn;
+}
+
+/* Animasi hanya aktif jika elemen memiliki kelas .show */
+.animated:not(.show) {
+  animation: none;
+}
