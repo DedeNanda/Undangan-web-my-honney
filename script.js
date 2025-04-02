@@ -1,7 +1,7 @@
 /** dibawah ini untuk typed ke 1*/
 document.addEventListener("DOMContentLoaded", function () {
   let typed = new Typed("#text_typed1", {
-    strings: ["Melanni Effendi", "M. Dede Nanda Pratama"],
+    strings: ["Melanni Efendi", "M. Dede Nanda Pratama"],
     typeSpeed: 60,
     backSpeed: 60,
     backDelay: 1000,
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 /** dibawah ini untuk typed ke 2*/
 document.addEventListener("DOMContentLoaded", function () {
   let typed = new Typed("#text_typed2", {
-    strings: ["M. Dede Nanda Pratama", "Melanni Effendi"],
+    strings: ["M. Dede Nanda Pratama", "Melanni Efendi"],
     typeSpeed: 60,
     backSpeed: 60,
     backDelay: 1000,
